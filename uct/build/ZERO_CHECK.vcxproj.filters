@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\uct\build\CMakeFiles\4e1d9817d2cb1741d90d9a2f3c5ffb27\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BBA9AC96-085A-33D1-9122-2154194E2BB9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

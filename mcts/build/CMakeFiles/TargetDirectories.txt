@@ -1,3 +1,0 @@
-H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/shogi-engine.dir
-H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/ALL_BUILD.dir
-H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/ZERO_CHECK.dir
