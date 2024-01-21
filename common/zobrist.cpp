@@ -7,10 +7,7 @@ HASH_KEY Zobrist::hand[COLOR_NB][RAW_PIECE_NB];
 HASH_KEY Zobrist::occ[COLOR_NB][SQ_NB];
 
 void Zobrist::init() {
-    std::random_device rnd; // 非決定的な乱数生成器を生成
-    // メルセンヌ・ツイスタの32ビット版、引数は初期シード値
     std::mt19937 mt;
-    // mt.seed(rnd());
     mt.seed(20231008);
 
     // 盤面の乱数表の初期化

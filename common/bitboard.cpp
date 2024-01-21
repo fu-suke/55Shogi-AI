@@ -392,9 +392,7 @@ void Bitboards::init() {
     // --------------------
     //   ハッシュキーの初期化
     // --------------------
-    std::random_device rnd;
     std::mt19937 mt;
-    // mt.seed(rnd());
     mt.seed(20231024);
 
     // Squareの乱数表の初期化

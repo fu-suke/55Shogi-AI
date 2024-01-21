@@ -1,12 +1,10 @@
 #pragma once
 
 #include <cstdint> // uint8_t, uint16_tなどの型を使えるようにする
+#include <cstdlib>
 #include <iostream>
 #include <map>
 #include <string>
-
-// ASSERTを使うためのマクロ
-#include <cstdlib>
 
 typedef uint64_t HASH_KEY;
 
@@ -99,7 +97,6 @@ enum Square : int32_t {
     SQ_LOWER_LEFT = int(SQ_DOWN + SQ_LEFT),
 };
 
-// Square型の++演算子のオーバーロード
 inline Square operator++(Square &sq) { return sq = (Square)(sq + 1); } // i++
 
 enum File : int32_t {
@@ -134,7 +131,7 @@ enum Direction : uint32_t {
 // Square型を文字列に変換する
 inline std::string sq_to_string(Square sq) {
     static const char *file_str = "12345"; // 筋
-    static const char *rank_str = "abcde"; // 団
+    static const char *rank_str = "abcde"; // 段
 
     std::string result = "";
     result += file_str[sq / 5];
@@ -153,22 +150,18 @@ inline File sq_to_file(Square sq) {
 
 // Square型の演算子のオーバーロード
 
-// 右シフト
 inline Square operator>>(Square sq, int n) {
     return static_cast<Square>(static_cast<int>(sq) >> n);
 }
 
-// 左シフト
 inline Square operator<<(Square sq, int n) {
     return static_cast<Square>(static_cast<int>(sq) << n);
 }
 
-// ビットAND
 inline Square operator&(Square sq, int mask) {
     return static_cast<Square>(static_cast<int>(sq) & mask);
 }
 
-// ビットAND代入
 inline Square &operator&=(Square &sq, int mask) {
     sq = sq & mask;
     return sq;
@@ -178,9 +171,9 @@ enum Piece : int32_t {
 
     // 注意！！！！！！！！！！！！！！
 
-    // ここの値をいじくるとどこかでエラーが発生する可能性があるので、
-    // いじくる前にその状態を必ず保存すること。
-    // いじくったら、makeしてプログラムの動作チェックを必ず行うこと。
+    // ここの値をいじくるとどこかでエラーが発生する可能性が高いので、
+    // いじくる前に必ず現在の状態を必ず保存すること。
+    // いじくったら、プログラムの動作チェックを必ず行うこと。
 
     NO_PIECE,
     RAW_PIECE_BEGIN = 1,
@@ -197,7 +190,7 @@ enum Piece : int32_t {
     HORSE,         // 馬
     DRAGON,        // 龍
     PIECE_NB,      // 駒種の終端
-    // 以下、先後の区別のある駒(Bがついているのは先手、Wがついているのは後手)
+    // 以下、先後の区別のある駒（Bがついているのは先手、Wがついているのは後手）
     COLOR_PIECE_BEGIN = 1,
     B_GOLD = 1,
     B_KING,

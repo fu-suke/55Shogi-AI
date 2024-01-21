@@ -1,10 +1,10 @@
 #include "position.h"
 #include <algorithm> // ソートを使えるようにする
-#include <bitset>    // std::bitsetを使うために必要
-#include <ctime>     // std::timeを使えるようにする
-#include <random>    // 乱数を使えるようにする
+#include <bitset>
+#include <ctime>
+#include <random>
 #include <unordered_set>
-#include <vector> // 可変長配列を使えるようにする
+#include <vector>
 
 std::vector<HASH_KEY> visited_hash_keys;
 

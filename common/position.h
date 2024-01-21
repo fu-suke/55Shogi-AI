@@ -1,7 +1,6 @@
 #pragma once
 
 #include "movegen.h"
-// #include "shogi.h"
 #include "zobrist.h"
 #include <map>
 #include <random>
@@ -71,12 +70,6 @@ class Position {
                           std::vector<Move> &mlist3, std::vector<Move> &mlist4,
                           int w1, int w2, int w3, int w4);
 };
-
-// 関数ポインタを定義することで、関数名を変数名のように利用できる
-/* 例
-Bitboard someFunction(Square sq, Color col, Position &pos);
-EffectFunc myFuncPointer = someFunction;
-*/
 
 // EffectFuncの定義
 typedef Bitboard (Position::*EffectFunc)(Square sq, Color color);
