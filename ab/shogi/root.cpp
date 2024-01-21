@@ -19,16 +19,9 @@ Move Root::search() {
     // 評価値の高い順にソート
     std::sort(root->children.begin(), root->children.end(), Node::compare);
 
-    // 表示
-    // std::cout << "=====SCORE=====" << std::endl;
-    // std::cout << root->children << std::endl;
-    // std::cout << std::endl;
-
     // 最も評価の高いノードが違法手の場合（＝合法手がない場合）も投了
     Node *best_node = root->children[0];
     if (best_node->is_illegal) {
-        // std::cout << "best_node is illegal" << std::endl;
-        // std::cout << "best_node->move: " << best_node->move << std::endl;
         return Move(Move::RESIGN);
     }
 

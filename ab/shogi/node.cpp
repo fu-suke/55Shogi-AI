@@ -16,7 +16,6 @@ Node::Node(Position pos, Move &move, int depth) {
     if (!this->move.is_none()) {
         // 指し手の安全性チェック
         // 違法な指し手の場合は、このノードの勝率を最低値にして終了
-        // std::cout << this->move << std::endl;
         if (!is_safe_move(move, pos.side_to_move, pos)) {
             this->score = -INFTY;
             this->is_illegal = true;

@@ -16,6 +16,9 @@
     <ClCompile Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\common\string_ex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\common\usi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\common\zobrist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -23,9 +26,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\ab\shogi\root.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="H:\マイドライブ\Tsukuba\2023春学期\Special-Seminar\55Shogi\ab\shogi\usi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

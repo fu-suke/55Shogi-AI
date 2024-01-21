@@ -1,0 +1,900 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/12 11:03:32 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:02.05
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/3.28.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/12 11:03:35 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.75
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/3.28.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-g489qx"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-g489qx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-g489qx'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_6963a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/12 11:03:38 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g489qx\\cmTC_6963a.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_6963a.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g489qx\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_6963a.dir\\Debug\\cmTC_6963a.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_6963a.dir\\Debug\\cmTC_6963a.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6963a.dir\\Debug\\\\" /Fd"cmTC_6963a.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6963a.dir\\Debug\\\\" /Fd"cmTC_6963a.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g489qx\\Debug\\cmTC_6963a.exe" /INCREMENTAL /ILK:"cmTC_6963a.dir\\Debug\\cmTC_6963a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-g489qx/Debug/cmTC_6963a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-g489qx/Debug/cmTC_6963a.lib" /MACHINE:X64  /machine:x64 cmTC_6963a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_6963a.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g489qx\\Debug\\cmTC_6963a.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_6963a.dir\\Debug\\cmTC_6963a.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_6963a.dir\\Debug\\cmTC_6963a.tlog\\cmTC_6963a.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g489qx\\cmTC_6963a.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:02.44
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-8orlq7"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-8orlq7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-8orlq7'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_143df.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/12 11:03:42 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8orlq7\\cmTC_143df.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_143df.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8orlq7\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_143df.dir\\Debug\\cmTC_143df.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_143df.dir\\Debug\\cmTC_143df.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_143df.dir\\Debug\\\\" /Fd"cmTC_143df.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_143df.dir\\Debug\\\\" /Fd"cmTC_143df.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8orlq7\\Debug\\cmTC_143df.exe" /INCREMENTAL /ILK:"cmTC_143df.dir\\Debug\\cmTC_143df.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-8orlq7/Debug/cmTC_143df.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-8orlq7/Debug/cmTC_143df.lib" /MACHINE:X64  /machine:x64 cmTC_143df.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_143df.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8orlq7\\Debug\\cmTC_143df.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_143df.dir\\Debug\\cmTC_143df.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_143df.dir\\Debug\\cmTC_143df.tlog\\cmTC_143df.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8orlq7\\cmTC_143df.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:02.65
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild のバージョン 17.7.2+d6990bcfa (.NET Framework)
+      2024/01/14 13:25:09 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+        "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.23
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/3.28.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild のバージョン 17.7.2+d6990bcfa (.NET Framework)
+      2024/01/14 13:25:11 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+        "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.52
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/3.28.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "G:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-x114d8"
+      binary: "G:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-x114d8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-x114d8'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e2bf4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild のバージョン 17.7.2+d6990bcfa (.NET Framework)
+        2024/01/14 13:25:13 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x114d8\\cmTC_e2bf4.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_e2bf4.dir\\Debug\\" を作成しています。
+          ディレクトリ "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x114d8\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.tlog\\unsuccessfulbuild" を作成しています。
+          "cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e2bf4.dir\\Debug\\\\" /Fd"cmTC_e2bf4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Fusuke\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cmake\\data\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          CMakeCCompilerABI.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e2bf4.dir\\Debug\\\\" /Fd"cmTC_e2bf4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Fusuke\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cmake\\data\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x114d8\\Debug\\cmTC_e2bf4.exe" /INCREMENTAL /ILK:"cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-x114d8/Debug/cmTC_e2bf4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-x114d8/Debug/cmTC_e2bf4.lib" /MACHINE:X64  /machine:x64 cmTC_e2bf4.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_e2bf4.vcxproj -> G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x114d8\\Debug\\cmTC_e2bf4.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_e2bf4.dir\\Debug\\cmTC_e2bf4.tlog\\cmTC_e2bf4.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x114d8\\cmTC_e2bf4.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:01.42
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Fusuke/AppData/Local/Programs/Python/Python310/Lib/site-packages/cmake/data/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "G:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-zdi38y"
+      binary: "G:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-zdi38y"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-zdi38y'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ab43f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild のバージョン 17.7.2+d6990bcfa (.NET Framework)
+        2024/01/14 13:25:16 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zdi38y\\cmTC_ab43f.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_ab43f.dir\\Debug\\" を作成しています。
+          ディレクトリ "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zdi38y\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_ab43f.dir\\Debug\\cmTC_ab43f.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_ab43f.dir\\Debug\\cmTC_ab43f.tlog\\unsuccessfulbuild" を作成しています。
+          "cmTC_ab43f.dir\\Debug\\cmTC_ab43f.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ab43f.dir\\Debug\\\\" /Fd"cmTC_ab43f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Fusuke\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cmake\\data\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          CMakeCXXCompilerABI.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ab43f.dir\\Debug\\\\" /Fd"cmTC_ab43f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Fusuke\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cmake\\data\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zdi38y\\Debug\\cmTC_ab43f.exe" /INCREMENTAL /ILK:"cmTC_ab43f.dir\\Debug\\cmTC_ab43f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-zdi38y/Debug/cmTC_ab43f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-zdi38y/Debug/cmTC_ab43f.lib" /MACHINE:X64  /machine:x64 cmTC_ab43f.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ab43f.vcxproj -> G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zdi38y\\Debug\\cmTC_ab43f.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_ab43f.dir\\Debug\\cmTC_ab43f.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_ab43f.dir\\Debug\\cmTC_ab43f.tlog\\cmTC_ab43f.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zdi38y\\cmTC_ab43f.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:01.52
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/21 12:45:47 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.94
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/3.28.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/21 12:45:50 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.65
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/3.28.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-2qs595"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-2qs595"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-2qs595'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_b6ae3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/21 12:45:53 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2qs595\\cmTC_b6ae3.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_b6ae3.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2qs595\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_b6ae3.dir\\Debug\\cmTC_b6ae3.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_b6ae3.dir\\Debug\\cmTC_b6ae3.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b6ae3.dir\\Debug\\\\" /Fd"cmTC_b6ae3.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b6ae3.dir\\Debug\\\\" /Fd"cmTC_b6ae3.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2qs595\\Debug\\cmTC_b6ae3.exe" /INCREMENTAL /ILK:"cmTC_b6ae3.dir\\Debug\\cmTC_b6ae3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-2qs595/Debug/cmTC_b6ae3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-2qs595/Debug/cmTC_b6ae3.lib" /MACHINE:X64  /machine:x64 cmTC_b6ae3.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b6ae3.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2qs595\\Debug\\cmTC_b6ae3.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_b6ae3.dir\\Debug\\cmTC_b6ae3.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_b6ae3.dir\\Debug\\cmTC_b6ae3.tlog\\cmTC_b6ae3.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2qs595\\cmTC_b6ae3.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:01.90
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-lh5d8d"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-lh5d8d"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-lh5d8d'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_2658c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/21 12:45:56 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lh5d8d\\cmTC_2658c.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_2658c.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lh5d8d\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_2658c.dir\\Debug\\cmTC_2658c.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_2658c.dir\\Debug\\cmTC_2658c.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2658c.dir\\Debug\\\\" /Fd"cmTC_2658c.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2658c.dir\\Debug\\\\" /Fd"cmTC_2658c.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lh5d8d\\Debug\\cmTC_2658c.exe" /INCREMENTAL /ILK:"cmTC_2658c.dir\\Debug\\cmTC_2658c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-lh5d8d/Debug/cmTC_2658c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/final/build/CMakeFiles/CMakeScratch/TryCompile-lh5d8d/Debug/cmTC_2658c.lib" /MACHINE:X64  /machine:x64 cmTC_2658c.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_2658c.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lh5d8d\\Debug\\cmTC_2658c.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_2658c.dir\\Debug\\cmTC_2658c.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_2658c.dir\\Debug\\cmTC_2658c.tlog\\cmTC_2658c.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\final\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lh5d8d\\cmTC_2658c.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:01.90
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/21 14:15:55 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:02.42
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/3.28.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+      Copyright (C) Microsoft Corporation.All rights reserved.
+      
+      2024/01/21 14:15:58 にビルドを開始しました。
+      ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\3.28.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:01.90
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/3.28.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-d7gceo"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-d7gceo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-d7gceo'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_d101a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/21 14:16:01 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d7gceo\\cmTC_d101a.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_d101a.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d7gceo\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_d101a.dir\\Debug\\cmTC_d101a.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_d101a.dir\\Debug\\cmTC_d101a.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d101a.dir\\Debug\\\\" /Fd"cmTC_d101a.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d101a.dir\\Debug\\\\" /Fd"cmTC_d101a.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d7gceo\\Debug\\cmTC_d101a.exe" /INCREMENTAL /ILK:"cmTC_d101a.dir\\Debug\\cmTC_d101a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-d7gceo/Debug/cmTC_d101a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-d7gceo/Debug/cmTC_d101a.lib" /MACHINE:X64  /machine:x64 cmTC_d101a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_d101a.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d7gceo\\Debug\\cmTC_d101a.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_d101a.dir\\Debug\\cmTC_d101a.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_d101a.dir\\Debug\\cmTC_d101a.tlog\\cmTC_d101a.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d7gceo\\cmTC_d101a.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:02.68
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-v92y9e"
+      binary: "H:/\u30de\u30a4\u30c9\u30e9\u30a4\u30d6/Tsukuba/2023\u6625\u5b66\u671f/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-v92y9e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-v92y9e'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_bb4f2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework 向け Microsoft (R) Build Engine バージョン 16.11.2+f32259642
+        Copyright (C) Microsoft Corporation.All rights reserved.
+        
+        2024/01/21 14:16:06 にビルドを開始しました。
+        ノード 1 上のプロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v92y9e\\cmTC_bb4f2.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          ディレクトリ "cmTC_bb4f2.dir\\Debug\\" を作成しています。
+          ディレクトリ "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v92y9e\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_bb4f2.dir\\Debug\\cmTC_bb4f2.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_bb4f2.dir\\Debug\\cmTC_bb4f2.tlog\\unsuccessfulbuild" を作成しています。
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bb4f2.dir\\Debug\\\\" /Fd"cmTC_bb4f2.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bb4f2.dir\\Debug\\\\" /Fd"cmTC_bb4f2.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v92y9e\\Debug\\cmTC_bb4f2.exe" /INCREMENTAL /ILK:"cmTC_bb4f2.dir\\Debug\\cmTC_bb4f2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-v92y9e/Debug/cmTC_bb4f2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/mcts/build/CMakeFiles/CMakeScratch/TryCompile-v92y9e/Debug/cmTC_bb4f2.lib" /MACHINE:X64  /machine:x64 cmTC_bb4f2.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_bb4f2.vcxproj -> H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v92y9e\\Debug\\cmTC_bb4f2.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_bb4f2.dir\\Debug\\cmTC_bb4f2.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_bb4f2.dir\\Debug\\cmTC_bb4f2.tlog\\cmTC_bb4f2.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-Seminar\\55Shogi\\mcts\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v92y9e\\cmTC_bb4f2.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:02.80
+        
+      exitCode: 0
+...
