@@ -1,0 +1,10 @@
+^H:\マイドライブ\TSUKUBA\2023春学期\SPECIAL-SEMINAR\55SHOGI\AB\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/ab -BH:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/ab/build --check-stamp-file H:/マイドライブ/Tsukuba/2023春学期/Special-Seminar/55Shogi/ab/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

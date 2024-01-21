@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Specific files
+./vscode/*
+tempCodeRunnerFile.*
+*.vscode
+*.ini
+*.KI2
+*.json

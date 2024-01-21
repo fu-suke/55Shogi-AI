@@ -1,0 +1,15 @@
+Date,Player 1,Player 2,Winner,Player 1 Thinking Time,Player 2 Thinking Time,Total Moves
+2024-01-12 12:57,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,175.989814,0.695926,18
+2024-01-12 13:01,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.9080929999999998,215.063877,21
+2024-01-12 13:03,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,525.7815659999999,1.142054,32
+2024-01-12 13:05,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.8627090000000001,120.17647,11
+2024-01-12 13:06,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,314.29647900000003,0.42297700000000005,24
+2024-01-12 13:06,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,729.5290409999999,1.8705410000000002,48
+2024-01-12 13:08,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.8750330000000002,116.347601,11
+2024-01-12 13:08,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.795969,117.96946,11
+2024-01-12 13:10,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,278.140809,0.835067,26
+2024-01-12 13:11,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,181.480957,0.30558399999999997,14
+2024-01-12 13:13,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.798252,111.305436,11
+2024-01-12 13:13,./engines/mcts-normal.exe,./engines/mcts-trained.exe,./engines/mcts-normal.exe,280.095396,0.77499,28
+2024-01-12 13:14,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,1.6164880000000001,239.821587,33
+2024-01-12 13:15,./engines/mcts-trained.exe,./engines/mcts-normal.exe,./engines/mcts-normal.exe,0.846786,118.181857,11

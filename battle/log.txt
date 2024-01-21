@@ -1,0 +1,5 @@
+<< isready
+>> readyok
+<< go
+<< position 4a5b
+<< go

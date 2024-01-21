@@ -1,0 +1,26 @@
+<< usi
+>> usiok
+<< setoption name USI_Ponder value false
+invalid comannd: setoption name USI_Ponder value false
+<< setoption name USI_Hash value 50
+invalid comannd: setoption name USI_Hash value 50
+<< setoption name Ponder value false
+invalid comannd: setoption name Ponder value false
+<< setoption name Hash value 50
+invalid comannd: setoption name Hash value 50
+<< setoption name Thread value 1
+invalid comannd: setoption name Thread value 1
+<< setoption name Threads value 1
+invalid comannd: setoption name Threads value 1
+<< setoption name resign value 32596
+invalid comannd: setoption name resign value 32596
+<< setoption name book_until value 100
+invalid comannd: setoption name book_until value 100
+<< setoption name BookDepth value 100
+invalid comannd: setoption name BookDepth value 100
+<< isready
+>> readyok
+<< usinewgame
+<< gameover draw
+invalid comannd: gameover draw
+<< quit
