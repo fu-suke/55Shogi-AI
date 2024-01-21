@@ -1,6 +1,6 @@
 #include "node.h"
 #include <algorithm>
-#include <cmath> // abs() for float, and fabs()
+#include <cmath>
 // #include <torch/cuda.h>
 #include <vector>
 
@@ -310,26 +310,11 @@ const std::vector<double> Node::scale = {0.03333333333333333,
 int Node::load_model() {
     // bool is_cuda_available = torch::cuda::is_available();
     // std::cout << "Is CUDA Available: " << is_cuda_available << std::endl;
+    std::string path_to_model = "~\\Desktop\\55Shogi\\hybrid\\shogi\\";
     std::string model_name = "playout_model.pt";
     if (!is_model_loaded) {
         try {
-            model = torch::jit::load(
-                "H:\\マイドライブ\\Tsukuba\\2023春学期\\Special-"
-                "Seminar\\55Shogi\\hybrid\\shogi\\" +
-                model_name);
-            model.eval();
-            is_model_loaded = true;
-            std::cout << "Successfully loaded the model: " << model_name
-                      << std::endl;
-            return 0;
-        } catch (const c10::Error &) {
-            ;
-        }
-        try {
-            model = torch::jit::load(
-                "G:\\マイドライブ\\Tsukuba\\2023春学期\\Special-"
-                "Seminar\\55Shogi\\hybrid\\shogi\\" +
-                model_name);
+            model = torch::jit::load(path_to_model + model_name);
             model.eval();
             is_model_loaded = true;
             std::cout << "Successfully loaded the model: " << model_name

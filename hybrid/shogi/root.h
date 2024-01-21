@@ -6,6 +6,4 @@ class Root {
     Root();
     Position pos;
     Move search();
-
-  private:
 };

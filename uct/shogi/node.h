@@ -3,7 +3,6 @@
 #include "../common/movegen.h"
 #include "../common/position.h"
 #include "params.h"
-// #include "shogi.h"
 #include <vector>
 
 const int UCB_UNREACHED = 100000;

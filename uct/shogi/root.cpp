@@ -36,18 +36,6 @@ Move Root::search() {
     }
     Move best_move = best_node->move;
 
-    // 表示
-    // std::cout << "=====SCORE=====" << std::endl;
-    // std::cout << root->children << std::endl;
-    // std::cout << std::endl;
-    // std::cout << "=====BEST'S CHILDREN=====" << std::endl;
-    // std::sort(best_node->children.begin(), best_node->children.end(),
-    //           Node::compare);
-    // std::cout << best_node->children << std::endl;
-
-    // std::cout << "max_depth: " << max_depth << std::endl;
-    // std::cout << "node_cnt: " << node_cnt << std::endl;
-
     std::cout << "node_cnt: " << node_cnt << std::endl;
 
     delete root;

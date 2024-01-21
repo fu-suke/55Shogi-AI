@@ -22,9 +22,7 @@ file(GLOB_RECURSE SHOGI_SOURCES
 # ヘッダーファイルのディレクトリをインクルード
 include_directories("${DIR_SHOGI}" "${DIR_COMMON}")
 
-# エグゼキュータブルを追加
 add_executable(shogi-engine ${SHOGI_SOURCES})
-
 target_link_libraries(shogi-engine "${TORCH_LIBRARIES}")
 set_property(TARGET shogi-engine PROPERTY CXX_STANDARD 17)
 

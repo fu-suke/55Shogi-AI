@@ -1,6 +1,6 @@
 #include "node.h"
 #include <algorithm>
-#include <cmath> // abs() for float, and fabs()
+#include <cmath>
 #include <vector>
 
 int node_cnt = 0;
@@ -153,38 +153,6 @@ double Node::playout() {
            PLAYER_DRAW * (1 - PLAYOUT_PIECE_WEIGHT);
 }
 
-// // 指し手加重つきのプレイアウト
-// double Node::playout() {
-//     Color color_us = pos.side_to_move;
-//     // PLAYOUT_LOOP_MAX手まで進める
-//     for (int i = 0; i < PLAYOUT_LOOP_MAX; ++i) {
-//         // 手番側指し手を生成
-//         std::vector<Move> move_list = generate_move_list(pos);
-//         std::vector<Move> capture_mlist = generate_capture_mlist(move_list);
-//         Move move = pos.select_random_move(capture_mlist);
-//         // 捕る手がない
-//         if (move.is_none()) {
-//             move = pos.select_random_move(move_list);
-//             // 合法手がない
-//             if (move.is_none()) {
-//                 // 自分の手番なら負け、相手の手番なら勝ち
-//                 if (pos.side_to_move == color_us) {
-//                     return PLAYER_LOSE;
-//                 } else {
-//                     return PLAYER_WIN;
-//                 }
-//             }
-//         }
-//         // 指し手を実行する
-//         pos.do_move(move);
-//         //    pos.display_piece_board();
-//     }
-//     // 勝負がついていなければ、駒の枚数に応じた評価値を返す
-//     // player優勢なら1に近く、opponent優勢なら0に近い値を返す
-//     return eval_pieces(color_us) * PLAYOUT_PIECE_WEIGHT +
-//            PLAYER_DRAW * (1 - PLAYOUT_PIECE_WEIGHT);
-// }
-
 // 駒の価値を考慮した評価値を返す（0.0 ~ 1.0）
 double Node::eval_pieces(const Color color_us) {
     double total_piece_value = 0;
@@ -267,7 +235,6 @@ double Node::ucb(int parent_play_cnt) {
 }
 
 double Node::rate() const {
-    // 本当はplay_cntが0の場合が無いはずだがなぜかたまになるので…
     if (play_cnt == 0) {
         std::cout << "play_cnt == 0" << std::endl;
         return 0;
