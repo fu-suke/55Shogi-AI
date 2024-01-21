@@ -7,12 +7,6 @@
 const int PLAYOUT_CNT = 200; // UCBの1手あたりの探索回数
 const double INFTY = 1e8;
 
-// こっちは使わない。resultが-1~1で加算され続けると、
-// result/cntが0に収束してしまう。
-// const int SCORE_WIN = 1;
-// const int SCORE_DRAW = 0;
-// const int SCORE_LOSE = -1;
-
 const double PLAYER_WIN = 1;
 const double PLAYER_DRAW = 0.5;
 const double PLAYER_LOSE = 0;
@@ -36,17 +30,6 @@ const double PLAYOUT_PIECE_WEIGHT = 1.0;
 // UCBのexplore項の係数。これを大きくすると探索が広がり、小さくすると探索が狭まる。
 // 0.3くらいが、探索が広がりすぎず、かつ狭まりすぎず、ちょうどいい気がする。
 const double C = 0.3;
-
-const int PAWN_VALUE = 1;
-const int SILVER_VALUE = 5;
-const int GOLD_VALUE = 6;
-const int BISHOP_VALUE = 8;
-const int ROOK_VALUE = 10;
-const int KING_VALUE = 0;
-const int PRO_PAWN_VALUE = 4;
-const int PRO_SILVER_VALUE = 6;
-const int HORSE_VALUE = 11;
-const int DRAGON_VALUE = 12;
 
 inline std::map<Piece, int> PIECE_VALUE_MAP = {
     {PAWN, 1}, {SILVER, 5},   {GOLD, 6},       {BISHOP, 8}, {ROOK, 10},

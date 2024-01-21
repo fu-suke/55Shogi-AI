@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -std=c++17 -I.# 本番用
 # CXXFLAGS = -std=c++17 -pg -gdwarf-4 # プロファイル用。超遅くなる。
 SOURCES = 	../common/main.cpp \
-			usi.cpp \
+			../common/usi.cpp \
 			root.cpp \
 			node.cpp \
 			../common/bitboard.cpp \
@@ -12,7 +12,7 @@ SOURCES = 	../common/main.cpp \
 			../common/zobrist.cpp \
 			../common/string_ex.cpp
 
-HEADERS = 	usi.h \
+HEADERS = 	../common/usi.h \
 			root.h \
 			node.h \
 			params.h \

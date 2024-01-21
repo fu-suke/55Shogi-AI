@@ -15,9 +15,6 @@ Move Root::search() {
             loop += UCT_PER_MOVE;
         }
     }
-    // int loop = PLAYOUT_CNT * move_list.size();
-    // int len = move_list.size();
-    // const int LOOP = UCT_PER_MOVE * len;
     // このノードは既にプレイされているものとする
     root->play_cnt = 1;
     for (int i = 0; i < loop; ++i) {
@@ -57,26 +54,3 @@ Move Root::search() {
 
     return best_move;
 }
-
-//     std::vector<MoveScore> ms_list;
-//     // std::cout << "=====CHILDREN=====" << std::endl;
-//     // std::cout << root->children << std::endl;
-//     for (auto child : root->children) {
-//         ms_list.push_back(MoveScore(child->move, child->rate()));
-//     }
-//     // 可能な指し手がない場合のために追加しておく
-//     ms_list.push_back(MoveScore(Move(Move::RESIGN), 0));
-
-//     // 評価値の高い順にソート
-//     std::sort(ms_list.begin(), ms_list.end(), std::greater<MoveScore>());
-
-//     std::cout << "=====SCORE=====" << std::endl;
-//     std::cout << ms_list << std::endl;
-
-//     std::cout << ms_list[0].move << std::endl;
-
-//     // 生成されたノードの個数を表示
-//     // std::cout << "node_cnt: " << node_cnt << std::endl;
-
-//     return ms_list[0].move;
-// }
