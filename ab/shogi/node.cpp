@@ -1,6 +1,6 @@
 #include "node.h"
 #include <algorithm>
-#include <cmath> // abs() for float, and fabs()
+#include <cmath>
 #include <vector>
 
 int node_cnt = 0;
@@ -67,7 +67,7 @@ double Node::search(double beta) {
     // 子ノードの探索
     for (auto move : move_list) {
         Node *child = new Node(pos, move, depth + 1);
-        // 子ノードが違法手だった場合バグるのでスキップ
+        // 子ノードが違法手だった場合、searchにかけるとバグるのでスキップ
         if (child->is_illegal) {
             delete child; // 不要な子ノードの削除
             continue;

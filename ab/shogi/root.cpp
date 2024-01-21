@@ -40,12 +40,8 @@ Move Root::search() {
 
     // その中からランダムに選ぶ
     int idx = rand() % candidates.size();
-    // int idx = 0;
     best_node = candidates[idx];
-
     Move best_move = best_node->move;
-
-    // std::cout << node_cnt << std::endl;
 
     delete root;
 
