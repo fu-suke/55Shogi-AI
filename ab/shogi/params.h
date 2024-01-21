@@ -5,7 +5,8 @@
 const double INFTY = 10000;
 
 // 深さは原則偶数にすること
-const int MAX_DEPTH = 6;
+const int MAX_DEPTH = 10;
+
 
 // 各駒の価値を定義
 inline std::map<Piece, int> PIECE_VALUE_MAP = {

@@ -11,17 +11,17 @@ const double PLAYER_WIN = 1;
 const double PLAYER_DRAW = 0.5;
 const double PLAYER_LOSE = 0;
 
-const int MAX_DEPTH = 12;
-// プレイアウトを何手目まで進めるか（10~20くらいでいいかも）
-const int PLAYOUT_LOOP_MAX = 6;
-const int UCT_PER_MOVE = 10000; // 駒打ち以外の指し手1手あたりの探索回数
-const int UCT_PER_DROP = 3000; // 駒打ち1手あたりの探索回数
+const int MAX_DEPTH = 8;
+// プレイアウトを何手目まで進めるか
+const int PLAYOUT_LOOP_MAX = 10;
+const int UCT_PER_MOVE = 3000; // 駒打ち以外の指し手1手あたりの探索回数
+const int UCT_PER_DROP = 1000; // 駒打ち1手あたりの探索回数
 
 // ucbが、「node自体が持つ駒の価値」を重視する割合。
 // この値を大きくすると、駒を捕る手に探索が集中する。
 const double UCB_PIECE_WEIGHT = 0.2;
 // 評価値が「node自体が持つ駒の価値」を重視する割合。
-// α * (このノードの駒得具合) + (1-α) * (未来の勝率)
+// (このノードの評価値）＝ α * (このノードの駒得具合) + (1-α) * (未来の勝率)
 const double NODE_PIECE_WEGHT = 0.2;
 
 // プレイアウト結果で駒の価値を重視する割合。基本的に1.0固定でいいと思う。

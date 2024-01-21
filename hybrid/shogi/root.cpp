@@ -42,9 +42,10 @@ Move Root::search() {
     for (auto &child : candidates) {
         // 元のスコア
         std::cout << child->move << ": " << child->score;
-        child->score +=
-            child->get_best_child()->calc_playout_score(pos.side_to_move);
-        child->score /= 2;
+        child->score =
+            child->score * (1 - PLAYOUT_WEIGHT) +
+            child->get_best_child()->calc_playout_score(pos.side_to_move) *
+                PLAYOUT_WEIGHT;
         std::cout << " -> " << child->score << "\n";
     }
 
