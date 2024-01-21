@@ -6,6 +6,7 @@
 #include <cstdint> // uint8_t, uint16_tなどの型を使えるようにする
 #include <iostream>
 #include <string>
+#include <utility> // std::swap
 #include <vector>
 
 class Position;
@@ -46,8 +47,11 @@ struct Move {
     // DROPやPROMOTEと違い、フラグを立てているわけではないのでビット演算はダメ
     bool is_resign() const { return value == RESIGN; }
     bool is_none() const { return value == NONE; }
+    // 
     bool is_check(Position &pos) const;
+    // 自分の駒の利きがなく、かつ相手の駒の利きがあるような場所（＝タダ）に移動する指し手かどうかを判定する
     bool is_danger(Position &pos, Bitboard &danger_zone) const;
+    
     Piece get_dropped_piece() const {
         return static_cast<Piece>((value >> 5) & 0x1F);
     }
@@ -89,7 +93,6 @@ struct Move {
 
 // Move型を標準出力するためのオーバーロード
 inline std::ostream &operator<<(std::ostream &os, Move move) {
-    // 降参
     if (move.is_resign()) {
         os << "resign";
         return os;
@@ -146,17 +149,11 @@ template <Piece piece>
 void generate_piece_moves(Color color, std::vector<Move> &mlist,
                           Bitboard target, Position &pos);
 
-// Squareと整数型とのビットシフト操作のオーバーロード
-
-// // Moveに対する演算子のオーバーロード
-
-// Moveに対するビットOR代入演算子のオーバーロード
 inline Move &operator|=(Move &m, Move value) {
     m.value |= value.value;
     return m;
 }
 
-// 全合法手を表示する
 inline std::ostream &operator<<(std::ostream &os, std::vector<Move> move_list) {
     for (auto m : move_list) {
         os << m << ' ';
@@ -167,28 +164,4 @@ inline std::ostream &operator<<(std::ostream &os, std::vector<Move> move_list) {
 inline bool invalid_pawn_drop(Square drop_to, Color color) {
     Bitboard to_bb = (1U << drop_to);
     return (to_bb & PROMOTE_ZONE[color]).p;
-}
-
-// 指し手とスコアのペア。合計32bit
-struct MoveScore {
-    Move move;
-    uint16_t score;
-    MoveScore(Move move, int score) : move(move), score(score) {}
-    bool operator<(const MoveScore &ms) const { return score < ms.score; }
-    bool operator>(const MoveScore &ms) const { return score > ms.score; }
-};
-
-// MoveScore型を標準出力するためのオーバーロード
-inline std::ostream &operator<<(std::ostream &os, MoveScore ms) {
-    os << ms.move << ":" << ms.score;
-    return os;
-}
-
-// MoveScoreのリストを標準出力するためのオーバーロード
-inline std::ostream &operator<<(std::ostream &os,
-                                std::vector<MoveScore> mlist) {
-    for (auto ms : mlist) {
-        os << ms << std::endl;
-    }
-    return os;
 }

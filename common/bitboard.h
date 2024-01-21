@@ -12,9 +12,7 @@ unsigned ctz(unsigned x);
 //      type define(uint)
 // ----------------------------
 
-// Bitboardがメモリ上の16byte境界に配置されるようにする
-// これにより、特定のSSE命令セットを利用してbitboardが操作できる
-struct alignas(16) Bitboard {
+struct Bitboard {
     union {
         uint32_t p;
     };
@@ -23,16 +21,9 @@ struct alignas(16) Bitboard {
     Bitboard(uint32_t p) : p(p) {}
     Bitboard(Square sq) : p(1U << sq) {}
 
-    // ビットを1に設定する
     void set_bit(Square sq) { p |= (1U << sq); }
-
-    // ビットを0に設定する
     void clear_bit(Square sq) { p &= ~(1U << sq); }
-
-    // そのビットが1に設定されているかどうかを判定する
     bool check_bit(Square sq) const { return p & (1U << sq); }
-
-    // 全てのビットを0にする
     void clear() { p = 0; }
 
     // ビットボードのビットが1である最も低い位の位置を返し、Bitboardからそのビットをクリアする
@@ -51,21 +42,13 @@ struct alignas(16) Bitboard {
         return lsb;
     }
 
-    // NOT演算
     friend Bitboard operator~(const Bitboard &bb);
-    // OR演算
     friend Bitboard operator|(const Bitboard &bb1, const Bitboard &bb2);
-    // AND演算
     friend Bitboard operator&(const Bitboard &bb1, const Bitboard &bb2);
-    // XOR演算
     friend Bitboard operator^(const Bitboard &bb1, const Bitboard &bb2);
-    // OR代入演算
     friend Bitboard &operator|=(Bitboard &bb1, const Bitboard &bb2);
-    // AND代入演算
     friend Bitboard &operator&=(Bitboard &bb1, const Bitboard &bb2);
-    // XOR代入演算
     friend Bitboard &operator^=(Bitboard &bb1, const Bitboard &bb2);
-    // 論理AND演算
     friend bool operator&&(const Bitboard &bb1, const Bitboard &bb2) {
         return (bb1 & bb2).p != 0;
     }
@@ -75,7 +58,6 @@ struct alignas(16) Bitboard {
     friend bool operator&&(bool b, const Bitboard &bb2) {
         return b ? bb2.p != 0 : false;
     }
-    // 論理OR演算
     friend bool operator||(const Bitboard &bb1, const Bitboard &bb2) {
         return (bb1 | bb2).p != 0;
     }
@@ -85,8 +67,6 @@ struct alignas(16) Bitboard {
     friend bool operator||(bool b, const Bitboard &bb2) {
         return b ? true : bb2.p != 0;
     }
-
-    // 複数の外部ソースファイルから参照できるようにする
     // std::cout << Bitboard と渡せるようにする
     friend std::ostream &operator<<(std::ostream &os, const Bitboard &bb);
 };
@@ -136,46 +116,39 @@ inline Bitboard operator~(const Bitboard &bb) {
     return Bitboard(~bb.p & 0x1FFFFFF);
 }
 
-// OR演算
 inline Bitboard operator|(const Bitboard &bb1, const Bitboard &bb2) {
     Bitboard result;
     result.p = bb1.p | bb2.p;
     return result;
 }
 
-// AND演算
 inline Bitboard operator&(const Bitboard &bb1, const Bitboard &bb2) {
     Bitboard result;
     result.p = bb1.p & bb2.p;
     return result;
 }
 
-// XOR演算
 inline Bitboard operator^(const Bitboard &bb1, const Bitboard &bb2) {
     Bitboard result;
     result.p = bb1.p ^ bb2.p;
     return result;
 }
 
-// OR代入演算
 inline Bitboard &operator|=(Bitboard &bb1, const Bitboard &bb2) {
     bb1.p |= bb2.p;
     return bb1;
 }
 
-// AND代入演算
 inline Bitboard &operator&=(Bitboard &bb1, const Bitboard &bb2) {
     bb1.p &= bb2.p;
     return bb1;
 }
 
-// XOR代入演算
 inline Bitboard &operator^=(Bitboard &bb1, const Bitboard &bb2) {
     bb1.p ^= bb2.p;
     return bb1;
 }
 
-// 等号
 inline bool operator==(const Bitboard &bb1, const Bitboard &bb2) {
     return bb1.p == bb2.p;
 }

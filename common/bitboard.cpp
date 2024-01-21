@@ -343,12 +343,9 @@ void Bitboards::init() {
             if (i / 5 == j / 5) {
                 // i<jだから、iから見たjの方角は下である
                 Bitboard bb1 = ROOK_EFFECT_BB[i][DIRECTION_DOWN];
-                // std::cout << "bb1 = " << std::endl << bb1 << std::endl;
                 // 逆に、jから見たiの方角は上である
                 Bitboard bb2 = ROOK_EFFECT_BB[j][DIRECTION_UP];
-                // std::cout << "bb2 = " << std::endl << bb2 << std::endl;
                 bb = bb1 & bb2;
-                // std::cout << "bb1 & bb2  = " << std::endl << bb << std::endl;
             }
             // 段が同じ場合
             else if (i % 5 == j % 5) {
@@ -395,9 +392,7 @@ void Bitboards::init() {
     // --------------------
     //   ハッシュキーの初期化
     // --------------------
-    std::random_device rnd;
     std::mt19937 mt;
-    // mt.seed(rnd());
     mt.seed(20231024);
 
     // Squareの乱数表の初期化

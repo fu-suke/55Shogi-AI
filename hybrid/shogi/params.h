@@ -5,8 +5,12 @@
 const double INFTY = 10000;
 
 // 深さは原則偶数にすること
-const int MAX_DEPTH = 10;
+const int MAX_DEPTH = 8;
+const double PLAYER_WIN = 1;
+const double PLAYER_LOSE = 0;
 
+// プレイアウトの結果をどの程度参考にするか
+const double PLAYOUT_WEIGHT = 0.2;
 
 // 各駒の価値を定義
 inline std::map<Piece, int> PIECE_VALUE_MAP = {

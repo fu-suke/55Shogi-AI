@@ -5,8 +5,8 @@
 int main(int argc, char **argv) {
     Bitboards::init();
     Zobrist::init();
-    // std::cout << "Hello, World!" << std::endl;
     USI usi = USI();
+    // std::cout << "Hello, World!" << std::endl;
     usi.loop();
 
     return 0;

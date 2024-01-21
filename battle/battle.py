@@ -67,7 +67,6 @@ class IllegalMoveException(Exception):
 
 
 def battle(engine1_path, engine2_path, game_cnt):
-    # load engines
     if game_cnt % 2 == 0:
         first = subprocess.Popen(engine1_path, stdin=subprocess.PIPE,
                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
@@ -81,7 +80,6 @@ def battle(engine1_path, engine2_path, game_cnt):
     players = [first, second]
     side_to_move = 0
 
-    # health check
     assert (send_message(first, "isready\n") == "readyok")
     assert (send_message(second, "isready\n") == "readyok")
 
@@ -121,7 +119,7 @@ def battle(engine1_path, engine2_path, game_cnt):
 
 
 def main():
-    engine1_path = "./engines/mcts-normal.exe"
-    engine2_path = "./engines/mcts-trained.exe"
+    engine1_path = "../engines/ab_2.exe"
+    engine2_path = "../engines/ab_4.exe"
     for i in range(1000):
         battle(engine1_path, engine2_path, i)

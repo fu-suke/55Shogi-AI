@@ -1,8 +1,4 @@
 #include "movegen.h"
-#include <utility> // std::swap
-#include <vector>  // 可変長配列を使えるようにする
-
-using namespace std;
 
 Move::Move() { value = NONE; }
 
@@ -47,8 +43,6 @@ Move::Move(Piece pr, Square to) {
     value = (to + (pr << 5) + DROP);
 }
 
-void generate_block_moves(Color color, std::vector<Move> &move_list);
-
 // マス目（"1a", "5e"など）から一意のインデックス（0～24）に変換する関数
 int sq_to_index(const std::string &sq) {
     char file_char = sq[0]; // file(筋)
@@ -73,12 +67,8 @@ std::vector<Move> generate_move_list(Position &pos,
     Color us = pos.side_to_move; // 手番側の色
 
     // 自玉が不在なら投了
-    // 本来は必要ない関数だが、GUIが玉の不在を検知できない場合があるので
+    // 本来は必要ない関数だが、GUIが玉の不在を検知できない場合があるので念のため
     if (pos.piece_bitboards[KING + us * PIECE_WHITE].p == 0) {
-        // std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
-        // std::cout << "you don't have the king!" << std::endl;
-        // std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
-        // 空のリストが返されると投了とみなされる
         return move_list;
     }
 
@@ -127,7 +117,6 @@ std::vector<Move> generate_capture_mlist(const std::vector<Move> &move_list) {
     std::vector<Move> capture_mlist;
     for (auto m : move_list) {
         if (m.is_drop()) {
-            // std::cout << "fuga" << std::endl;
             continue;
         }
         Piece captured = m.get_captured_piece();
@@ -140,22 +129,15 @@ std::vector<Move> generate_capture_mlist(const std::vector<Move> &move_list) {
 
 // 駒打ち以外の指し手を生成する関数
 void generate_moves(Color color, std::vector<Move> &move_list, Position &pos) {
-    // 歩の指し手を生成
     generate_piece_moves<PAWN>(color, move_list, pos);
-    // 銀
     generate_piece_moves<SILVER>(color, move_list, pos);
-    // 金
     generate_piece_moves<GOLD>(color, move_list, pos);
-    // 角
     generate_piece_moves<BISHOP>(color, move_list, pos);
-    // 飛車
     generate_piece_moves<ROOK>(color, move_list, pos);
-    // 成り駒
     generate_piece_moves<PRO_PAWN>(color, move_list, pos);
     generate_piece_moves<PRO_SILVER>(color, move_list, pos);
     generate_piece_moves<HORSE>(color, move_list, pos);
     generate_piece_moves<DRAGON>(color, move_list, pos);
-    // 玉
     generate_piece_moves<KING>(color, move_list, pos);
 }
 
@@ -178,8 +160,7 @@ void generate_drop_moves(Color color, Bitboard target,
         Bitboard not_occupied_for_pawn =
             not_occupied & ~FILE_BB[pawn_file] & ~PROMOTE_ZONE[color];
 
-        // 打ち歩詰めも後々ここで対策する
-
+        // 打ち歩詰めはis_safe_move()でチェックし、ここではチェックしない
         while (not_occupied_for_pawn.p != 0) {
             Square to = not_occupied_for_pawn.pop(); // 駒打ちする場所
             Move m = Move(PAWN, to);
@@ -260,7 +241,6 @@ void generate_block_moves(Color color, std::vector<Move> &move_list,
     // 移動合いで王手を防ぐ
     // 攻撃してきている敵の駒の位置も移動先の候補となる（その駒を捕ってしまえば防御できるので）
     between_bb |= Bitboard(checker_sq);
-    // cout << "between_bb: " << endl << between_bb << endl;
     generate_piece_moves<PAWN>(color, move_list, between_bb, pos);
     generate_piece_moves<SILVER>(color, move_list, between_bb, pos);
     generate_piece_moves<GOLD>(color, move_list, between_bb, pos);
@@ -317,13 +297,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
         // 歩・飛車・角（成れるなら必ず成る属）
         if constexpr (piece == PAWN || piece == BISHOP || piece == ROOK) {
             while (bb.p != 0) {
-
                 Square to = bb.pop();
-                // その駒を動かしたとき、自玉が王手になるような指し手は生成しない
-                // if (!is_safe_move(from, to, color)) {
-                //     continue;
-                // }
-
                 Move m = Move(from, to);
                 // 成れるなら必ず成る
                 if (m.can_promote(color)) {
@@ -338,9 +312,6 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
                            piece == DRAGON) {
             while (bb.p != 0) {
                 Square to = bb.pop();
-                // if (!is_safe_move(from, to, color)) {
-                //     continue;
-                // }
                 Move m = Move(from, to);
                 mlist.push_back(m);
             }
@@ -349,9 +320,6 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
         else if constexpr (piece == SILVER) {
             while (bb.p != 0) {
                 Square to = bb.pop();
-                // if (!is_safe_move(from, to, color)) {
-                //     continue;
-                // }
                 Move m = Move(from, to);
                 // 不成の手を生成
                 mlist.push_back(m);
@@ -398,6 +366,17 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
 bool is_safe_move(Move move, Color color, Position &pos) {
     // 指し手生成アルゴリズムの原理的に、駒打ちの指し手は安全である
     if (move.is_drop()) {
+        // 打ち歩詰めチェック
+        if (move.get_dropped_piece() == PAWN && move.is_check(pos)) {
+            pos.do_move(move);
+            std::vector<Move> mlist = generate_move_list(pos);
+            Move m = pos.select_random_move(mlist);
+            if (m.is_none()) {
+                pos.undo_move(move);
+                return false;
+            }
+            pos.undo_move(move);
+        }
         return true;
     }
     return is_safe_move(move.get_from(), move.get_to(), color, pos);
@@ -405,8 +384,8 @@ bool is_safe_move(Move move, Color color, Position &pos) {
 
 // Sqにある駒を移動させたときに、color側が王手になるかどうかを判定する関数
 bool is_safe_move(Square from, Square to, Color color, Position &pos) {
-    // ASSERT(color_of(pos.piece_board[from]) == color, "move is not legal !!!");
-    // 駒を実際に移動させる
+    // ASSERT(color_of(pos.piece_board[from]) == color, "move is not legal
+    // !!!"); 駒を実際に移動させる
     Piece removed = pos.move_piece(from, to, false);
     // 自玉の王手チェック
     bool is_safe = !pos.is_check(color);
@@ -441,7 +420,6 @@ bool Move::is_danger(Position &pos, Bitboard &danger_zone) const {
     Piece removed = pos.move_piece(from, to, false);
     Bitboard enemy_effect = pos.all_effect(~pos.side_to_move);
     Bitboard our_effect = pos.all_effect(pos.side_to_move);
-    // Bitboard danger_zone = enemy_effect & ~our_effect;
     Bitboard d = enemy_effect & ~our_effect;
     bool is_danger = d.check_bit(to);
     // 駒を戻す。unmove->set_pieceの順番に注意
