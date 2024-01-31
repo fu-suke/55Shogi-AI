@@ -5,7 +5,7 @@
 const double INFTY = 10000;
 
 // 深さは原則偶数にすること
-const int MAX_DEPTH = 8;
+const int MAX_DEPTH = 6;
 const double PLAYER_WIN = 1;
 const double PLAYER_LOSE = 0;
 

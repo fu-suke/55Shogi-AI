@@ -3,56 +3,36 @@ import re
 import os
 import csv
 from datetime import datetime
-import time
-import pandas as pd
-import sys
 
 
 def send_message(exe, message):
-    # メッセージを送信
-    print(f"GM: {message.strip()}")
+    # send message to engine
+    # print(f"GM: {message.strip()}")
     exe.stdin.write(message)
     exe.stdin.flush()
 
-    # 標準出力からの返答を読み取る
+    # get message from engine
     while True:
         output = exe.stdout.readline().strip()
         # print(f"{exe.args[:-4]}: {output}")
         if "ok" in output or "bestmove" in output:
-            print(f"{exe.args[:-4]}: {output}")
+            # print(f"{exe.args[:-4]}: {output}")
             return output
 
 
 def add_game_result(player1, player2, winner, player1_time, player2_time, total_moves):
     log_file = "battle_log.csv"
     file_exists = os.path.isfile(log_file)
-    max_retries = 5  # 最大再試行回数
-    wait_seconds = 3  # 再試行するまでの待機時間（秒）
 
-    for attempt in range(max_retries):
-        try:
-            with open(log_file, 'a', newline='') as file:
-                writer = csv.writer(file)
-                if not file_exists:
-                    writer.writerow(["Date", "Player 1", "Player 2", "Winner",
-                                    "Player 1 Thinking Time", "Player 2 Thinking Time", "Total Moves"])
-                    file_exists = True  # ファイルが存在するとして扱う
+    with open(log_file, 'a', newline='') as file:
+        writer = csv.writer(file)
+        if not file_exists:
+            writer.writerow(["Date", "Player1", "Player2", "Winner",
+                            "Player1ThinkingTime", "Player2 ThinkingTime", "TotalMoves"])
 
-                now = datetime.now().strftime("%Y-%m-%d %H:%M")
-                writer.writerow([now, player1, player2, winner,
-                                player1_time, player2_time, total_moves])
-            break  # 書き込みに成功したらループを抜ける
-        except IOError as e:
-            # IOErrorが発生した場合（ファイルが他のプログラムによって使用中など）
-            if attempt < max_retries - 1:  # 最後の試行では待機しない
-                time.sleep(wait_seconds)  # 指定した秒数だけ待機
-            else:
-                raise  # 最大試行回数に達した場合は例外を再発生させる
-
-    # ログファイルが1000行を超えていたら終わり
-    df = pd.read_csv(log_file)
-    if len(df) >= 1000:
-        sys.exit(0)
+        now = datetime.now().strftime("%Y-%m-%d %H:%M")
+        writer.writerow([now, player1, player2, winner,
+                        player1_time, player2_time, total_moves])
 
 
 move_pattern = re.compile(r"bestmove\s([^\s]+)")
@@ -66,8 +46,13 @@ class IllegalMoveException(Exception):
     pass
 
 
-def battle(engine1_path, engine2_path, game_cnt):
-    if game_cnt % 2 == 0:
+def battle(engine1_path, engine2_path):
+    if not hasattr(battle, "cnt"):
+        battle.cnt = 1
+    else:
+        battle.cnt += 1
+
+    if battle.cnt % 2 == 0:
         first = subprocess.Popen(engine1_path, stdin=subprocess.PIPE,
                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
         second = subprocess.Popen(engine2_path, stdin=subprocess.PIPE,
@@ -83,7 +68,8 @@ def battle(engine1_path, engine2_path, game_cnt):
     assert (send_message(first, "isready\n") == "readyok")
     assert (send_message(second, "isready\n") == "readyok")
 
-    print(f"Game {game_cnt+1} start !!")
+    print(
+        f"Game {battle.cnt}: {first.args[:-4]} vs {second.args[:-4]} start!!")
     times = [0, 0]
     turn = 0
     try:
@@ -96,22 +82,21 @@ def battle(engine1_path, engine2_path, game_cnt):
             move = move_pattern.match(best_move).group(1)
             if move:
                 if move == "resign":
-                    # print(f"Player {side_to_move} resigned.")
+                    print(f"{players[side_to_move].args[:-4]} resigned.")
                     raise ResignException(side_to_move)
                 send_message(players[~side_to_move], f"position {move}\n")
-                side_to_move = ~side_to_move
+                side_to_move ^= 1
             else:
                 raise IllegalMoveException()
     except ResignException as e:
-        winner = players[~e.args[0]]
-        print(f"player {e.args[0]} resigned.")
-        add_game_result(first.args, second.args,
-                        winner.args, times[0], times[1], turn)
+        winner = 1 ^ e.args[0]
+        add_game_result(first.args[:-4], second.args[:-4],
+                        winner, times[0], times[1], turn)
     except IllegalMoveException:
         print("Illegal move !!")
         pass
     finally:
-        # プロセスを終了
+        # terminate engines
         for player in players:
             player.stdin.close()
             player.terminate()
@@ -119,7 +104,29 @@ def battle(engine1_path, engine2_path, game_cnt):
 
 
 def main():
-    engine1_path = "../engines/ab_2.exe"
-    engine2_path = "../engines/ab_4.exe"
-    for i in range(1000):
-        battle(engine1_path, engine2_path, i)
+    engine_dir = "../engines/"
+    engine_list = os.listdir(engine_dir)
+    engine_list = [engine_dir + engine for engine in engine_list]
+    ab_engine_list = [engine for engine in engine_list if "ab" in engine]
+    uct_engine_list = [engine for engine in engine_list if "uct" in engine]
+    hybrid_engine_list = [
+        engine for engine in engine_list if "hybrid" in engine]
+
+    for engine1 in hybrid_engine_list:
+        for engine2 in uct_engine_list:
+            for _ in range(100):
+                battle(engine1, engine2)
+
+    for engine1 in hybrid_engine_list:
+        for engine2 in ab_engine_list:
+            for _ in range(100):
+                battle(engine1, engine2)
+
+    for engine1 in uct_engine_list:
+        for engine2 in ab_engine_list:
+            for _ in range(100):
+                battle(engine1, engine2)
+
+
+if __name__ == "__main__":
+    main()
