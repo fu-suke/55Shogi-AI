@@ -5,9 +5,10 @@
 Root::Root() {
     pos = Position();
     // ノードの評価にプレイアウトの機械学習モデルを使う場合、モデルを読み込む
-    // if (Node::is_model_loaded == false) {
-    //     Node::load_model();
-    // }
+    if (Node::is_model_loaded == false) {
+        Node::load_model();
+        Node::is_model_loaded = true;
+    }
 }
 
 Move Root::search() {
@@ -40,12 +41,17 @@ Move Root::search() {
     std::cout << "=== SCORE ===\n";
     // それぞれのbest_childのプレイアウトスコアを計算して、元のスコアと平均する
     for (auto &child : candidates) {
+        // 機械学習モデルで簡易的に評価したプレイアウトスコア
+        double best_child_score =
+            child->get_best_child()->eval_playout_score(pos.side_to_move);
+        // 実際にプレイアウトを行って評価したプレイアウトスコア
+        // double best_child_score =
+        // child->get_best_child()->calc_playout_score(pos.side_to_move);
+        Node *best_child = child->get_best_child();
         // 元のスコア
         std::cout << child->move << ": " << child->score;
-        child->score =
-            child->score * (1 - PLAYOUT_WEIGHT) +
-            child->get_best_child()->calc_playout_score(pos.side_to_move) *
-                PLAYOUT_WEIGHT;
+        child->score = child->score * (1 - PLAYOUT_WEIGHT) +
+                       best_child_score * PLAYOUT_WEIGHT;
         std::cout << " -> " << child->score << "\n";
     }
 

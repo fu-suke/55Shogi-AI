@@ -310,7 +310,7 @@ const std::vector<double> Node::scale = {0.03333333333333333,
 int Node::load_model() {
     // bool is_cuda_available = torch::cuda::is_available();
     // std::cout << "Is CUDA Available: " << is_cuda_available << std::endl;
-    std::string path_to_model = "~\\Desktop\\55Shogi\\hybrid\\shogi\\";
+    std::string path_to_model = "~/Desktop/55Shogi/hybrid/shogi/model/";
     std::string model_name = "playout_model.pt";
     if (!is_model_loaded) {
         try {

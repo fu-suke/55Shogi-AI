@@ -14,8 +14,8 @@ const double PLAYER_LOSE = 0;
 const int MAX_DEPTH = 8;
 // プレイアウトを何手目まで進めるか
 const int PLAYOUT_LOOP_MAX = 10;
-const int UCT_PER_MOVE = 3000; // 駒打ち以外の指し手1手あたりの探索回数
-const int UCT_PER_DROP = 1000; // 駒打ち1手あたりの探索回数
+const int UCT_PER_MOVE = 1000; // 駒打ち以外の指し手1手あたりの探索回数
+const int UCT_PER_DROP = 300; // 駒打ち1手あたりの探索回数
 
 // ucbが、「node自体が持つ駒の価値」を重視する割合。
 // この値を大きくすると、駒を捕る手に探索が集中する。
