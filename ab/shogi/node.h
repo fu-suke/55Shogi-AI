@@ -10,7 +10,7 @@ class Node {
   public:
     Position pos;
     Move move; // このノードに来た時に実行する指し手
-    bool is_illegal = false; // ↑が違法手かどうか
+    bool is_illegal = false; // this->moveが違法手かどうか
     int depth = 0;           // rootからの深さ
     std::vector<Node *> children = {};
     // このノードの勝率。ただし前の手番側から見た勝率である。

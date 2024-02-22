@@ -17,14 +17,10 @@ Node::Node(Position pos, Move &move, int depth) {
     // NONEはROOTノードの場合にのみ渡される。
     // ROOTノードは既に指し手を実行した後なのでこの処理をスキップする。
     if (!this->move.is_none()) {
-        // 指し手の安全性チェック
-        // 違法な指し手の場合は、このノードの勝率を最低値にして終了
-        // std::cout << this->move << std::endl;
         if (!is_safe_move(move, pos.side_to_move, pos)) {
             this->score = -INFTY;
             this->is_illegal = true;
         }
-        // 指し手を実行
         this->pos.do_move(move);
         // もしこの指し手が一度訪れた盤面だったら千日手対策として違法手にする
         HASH_KEY hash_key = this->pos.get_hash_key();
@@ -39,7 +35,6 @@ Node::Node(Position pos, Move &move, int depth) {
 Node::~Node() {}
 
 double Node::search(double beta) {
-    // 指し手生成
     std::vector<Move> move_list = generate_move_list(pos);
     if (move_list.size() == 0) {
         // 指し手がない（＝詰み）の場合は前の手番側の勝ち
@@ -49,11 +44,9 @@ double Node::search(double beta) {
     }
 
     // 深さの上限に達していたらこのノードの評価値を返す
-    // αβは、「『前の手番』から見たこのノードの評価値」を返すのが適切！！
+    // 「『前の手番』から見たこのノードの評価値」を返すのが適切！！
     if (depth == MAX_DEPTH) {
         this->score = eval_pieces(~pos.side_to_move);
-        // this->score = eval_playout_score(~pos.side_to_move);
-        // this->score = calc_playout_score();
         // rootから見た子の評価値が正になるように符号調整
         if (depth % 2 == 0) {
             this->score -= 1;
@@ -65,11 +58,9 @@ double Node::search(double beta) {
     // α：子ノードの評価値の最大値
     double alpha = -INFTY;
     double value = -1;
-    // 子ノードの探索
     for (auto move : move_list) {
         std::unique_ptr<Node> child =
             std::make_unique<Node>(pos, move, depth + 1);
-        // 子ノードが違法手だった場合バグるのでスキップ
         if (child->is_illegal) {
             continue;
         }

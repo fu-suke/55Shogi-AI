@@ -6,12 +6,10 @@ from datetime import datetime
 
 
 def send_message(exe, message):
-    # send message to engine
     # print(f"GM: {message.strip()}")
     exe.stdin.write(message)
     exe.stdin.flush()
 
-    # get message from engine
     while True:
         output = exe.stdout.readline().strip()
         # print(f"{exe.args[:-4]}: {output}")
@@ -96,7 +94,6 @@ def battle(engine1_path, engine2_path):
         print("Illegal move !!")
         pass
     finally:
-        # terminate engines
         for player in players:
             player.stdin.close()
             player.terminate()

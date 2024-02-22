@@ -19,7 +19,6 @@ Node::Node(Color player_color, Position pos, Move &move, int depth) {
     }
 }
 
-// デストラクタ。子ノードを全て削除したのち、自身を削除する
 Node::~Node() {
     for (auto child : children) {
         delete child;
@@ -32,7 +31,6 @@ double Node::search() {
     // 初めて来る時は指し手を実行し、プレイアウトを実行
     // ただし、違法手の場合はこのノードで終わり
     if (play_cnt == 1) {
-        // 指し手の安全性チェック
         if (!is_safe_move(move, pos.side_to_move, pos)) {
             this->is_illegal = true;
             // 本当はここで自身のスコアを設定しておくのが良さそう
@@ -75,14 +73,7 @@ double Node::search() {
         child = select_child();
         // nullptrが返ってくる場合は打つ手がないので負け
         if (child == nullptr) {
-            // ただし、返すべきは「１つ前の手番から見た勝敗」なのでWINを返す
-            // res = SCORE_WIN;
-            // プレイアウトしなくても勝敗が確定しているなら、
-            // このノードが必ず選ばれるように価値を超高くしておく
-            // std::cout << "====CHACKMATE====" << std::endl;
-            // std::cout << "side_to_move: " << pos.side_to_move << std::endl;
-            // score += 10000;
-            res = 0.5; // ここを低くする…？
+            res = 0.5; // なんで0.5にしてるんだっけ？
             this->score = SCORE_MAX;
             return res;
         }

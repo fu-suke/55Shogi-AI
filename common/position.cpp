@@ -10,7 +10,6 @@ std::vector<HASH_KEY> visited_hash_keys;
 
 // 初期盤面を生成するコンストラクタ
 Position::Position() {
-    // piece_bitboardsの初期化
 
     // 先手の駒
     piece_bitboards[B_GOLD] = Bitboard(1U << 19);
@@ -71,7 +70,6 @@ Position::Position(const Position &pos) {
     std::copy(std::begin(pos.hands), std::end(pos.hands), std::begin(hands));
 }
 
-// 手駒と盤上の駒からハッシュキーを計算する
 HASH_KEY Position::get_hash_key() {
     HASH_KEY hash_key = 0;
     // 盤上の駒のハッシュ値を計算
@@ -124,7 +122,6 @@ void Position::do_move(const Move &move) {
         }
     }
 
-    // 手番を反転させる
     side_to_move = ~side_to_move;
 }
 
@@ -253,27 +250,22 @@ Square Position::king_square(Color color) {
     return static_cast<Square>(ctz(king.p));
 }
 
-// 歩の利き
 Bitboard Position::pawn_effect(Square sq, Color color) {
     return PAWN_EFFECT_BB[sq][color];
 }
 
-// 金
 Bitboard Position::gold_effect(Square sq, Color color) {
     return GOLD_EFFECT_BB[sq][color];
 }
 
-// 銀
 Bitboard Position::silver_effect(Square sq, Color color) {
     return SILVER_EFFECT_BB[sq][color];
 }
 
-// 玉の利き
 Bitboard Position::king_effect(Square sq, Color color) {
     return KING_EFFECT_BB[sq];
 }
 
-// 角の利き
 Bitboard Position::bishop_effect(Square sq, Color color) {
     Bitboard occ = occupied_bb(COLOR_ALL);
     // 角の斜め方向にあるコマしか利きに影響を与えないので、それ以外の駒を無視する
@@ -330,7 +322,6 @@ Bitboard Position::bishop_effect(Square sq, Color color) {
     }
 }
 
-// 飛車の利き
 Bitboard Position::rook_effect(Square sq, Color color) {
     Bitboard occ = occupied_bb(COLOR_ALL);
     occ &= ROOK_EFFECT_BB[sq][DIRECTION_CROSS];
@@ -470,7 +461,6 @@ void Position::display_bitboards() {
         }
     }
 
-    // コンソールに出力
     std::cout << "**********" << std::endl;
     for (int i = 0; i < 5; i++) {
         std::cout << board[i] << std::endl;
@@ -551,8 +541,7 @@ Move Position::select_weighted_random_move(std::vector<Move> &move_list) {
 
     std::vector<Move> capture_list = {};
     std::vector<Move> check_list = {};
-    std::vector<Move> danger_list =
-        {}; // 敵の利きがあり、かつ自分の利きがないマスに移動する手
+    std::vector<Move> danger_list ={};
     std::vector<Move> other_list = {};
 
     for (const auto &move : move_list) {

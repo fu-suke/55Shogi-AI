@@ -56,10 +56,7 @@ void USI::loop() {
             root.pos.display_hands();
         }
 
-        // コマンドで"hello"と入力された場合
         else if (cmds[0] == "hello") {
-            // こちらも"Hello!"と出力する
-            // あいさつは大事
             std::cout << "Hello!" << std::endl;
         }
 
