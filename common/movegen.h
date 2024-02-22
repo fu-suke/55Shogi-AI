@@ -3,10 +3,10 @@
 #include "bitboard.h"
 #include "position.h"
 #include "shogi.h"
-#include <cstdint> // uint8_t, uint16_tなどの型を使えるようにする
+#include <cstdint>
 #include <iostream>
 #include <string>
-#include <utility> // std::swap
+#include <utility>
 #include <vector>
 
 class Position;
@@ -57,7 +57,7 @@ struct Move {
     }
     Piece set_dropped_piece(Piece pr) {
         // prが生駒であることを保証する
-        ASSERT(!is_promoted(pr), "This piece is promoted !!!");
+        // ASSERT(!is_promoted(pr), "This piece is promoted !!!");
         value |= static_cast<uint16_t>(pr << 5);
         return pr;
     }

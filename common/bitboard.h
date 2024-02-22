@@ -8,9 +8,6 @@
 
 unsigned ctz(unsigned x);
 
-// ----------------------------
-//      type define(uint)
-// ----------------------------
 
 struct Bitboard {
     union {

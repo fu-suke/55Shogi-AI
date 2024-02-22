@@ -3,7 +3,7 @@
 #include "../common/position.h"
 #include "params.h"
 #include <filesystem>
-#include <torch/script.h> // モデルの読み込みと実行に必要なヘッダー
+#include <torch/script.h>
 #include <vector>
 
 extern int node_cnt;

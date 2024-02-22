@@ -2,10 +2,8 @@
 
 Move::Move() { value = NONE; }
 
-// MoveTypeからのコンストラクタ
 Move::Move(MoveType move_type) { value = move_type; }
 
-// 文字列からのコンストラクタ
 Move::Move(const std::string &move) {
     value = NONE;
     std::string to = move.substr(2, 2);
@@ -33,7 +31,6 @@ Move::Move(const std::string &move) {
     }
 }
 
-// Squareからのコンストラクタ
 Move::Move(Square from, Square to) { value = (to + (from << 5)); }
 
 // PieceとSquareからのコンストラクタ(駒打ち用)
@@ -170,23 +167,18 @@ void generate_drop_moves(Color color, Bitboard target,
 
     while (not_occupied.p != 0) {
         Square to = not_occupied.pop(); // 駒打ちする場所
-
-        // 銀
         if (hand_exists(pos.hands[color], SILVER)) {
             Move m = Move(SILVER, to);
             move_list.push_back(m);
         }
-        // 金
         if (hand_exists(pos.hands[color], GOLD)) {
             Move m = Move(GOLD, to);
             move_list.push_back(m);
         }
-        // 角
         if (hand_exists(pos.hands[color], BISHOP)) {
             Move m = Move(BISHOP, to);
             move_list.push_back(m);
         }
-        // 飛車
         if (hand_exists(pos.hands[color], ROOK)) {
             Move m = Move(ROOK, to);
             move_list.push_back(m);
@@ -222,7 +214,6 @@ void generate_block_moves(Color color, std::vector<Move> &move_list,
                 checker_sq = enemy_sq;
                 ++checkers_cnt;
                 if (checkers_cnt >= 2) {
-                    // cout << "double check" << endl;
                     return; // 両王手なら玉を動かすしかないので、ここで終了
                 }
                 between_bb = get_between_bb(enemy_sq, king_sq);
@@ -275,7 +266,6 @@ template <Piece piece>
 // ある種の駒（複数枚可）がtargetに移動するような指し手を生成する関数
 void generate_piece_moves(Color color, std::vector<Move> &mlist,
                           const Bitboard target, Position &pos) {
-    // 駒の種類が正しいかチェック
     // ASSERT(piece == PAWN || piece == SILVER || piece == BISHOP ||
     //            piece == ROOK || piece == GOLD || piece == KING ||
     //            piece == PRO_PAWN || piece == PRO_SILVER || piece == HORSE ||
@@ -294,7 +284,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
         // targetに行けないような場所は移動先から除外する
         bb &= target;
 
-        // 歩・飛車・角（成れるなら必ず成る属）
+        // 歩・飛車・角（成れるなら必ず成る）
         if constexpr (piece == PAWN || piece == BISHOP || piece == ROOK) {
             while (bb.p != 0) {
                 Square to = bb.pop();
@@ -306,7 +296,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
                 mlist.push_back(m);
             }
         }
-        // と・金・全・馬・竜（成れない属）
+        // と・金・全・馬・竜（成れない）
         else if constexpr (piece == PRO_PAWN || piece == GOLD ||
                            piece == PRO_SILVER || piece == HORSE ||
                            piece == DRAGON) {
@@ -336,7 +326,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
             Square king_sq = pos.king_square(color);
             Piece king = pos.clear_piece(king_sq);
             // 自玉が居ない状態での敵の利きを再計算
-            // （例：左から飛車の王手がかかっているとき、玉が１マス右に逃げてしまうのを防止する）
+            // 例：左から飛車の王手がかかっているとき、玉が１マス右に逃げてしまうのを防止する
             Bitboard enemy_effect_bb = pos.all_effect(~color);
             // 敵の駒の利きでない、かつ自分の利き、かつ自分の駒がない場所を取得
             Bitboard safety_zone = ~enemy_effect_bb &
@@ -348,7 +338,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
                 Move m = Move(from, to);
                 mlist.push_back(m);
             }
-            // 玉を戻す
+            // 取り除いた玉を戻す
             pos.set_piece(king_sq, king);
         }
     }
@@ -365,6 +355,7 @@ void generate_piece_moves(Color color, std::vector<Move> &mlist,
 // そのMoveをしたときに、color側が王手になるかどうかを判定する関数
 bool is_safe_move(Move move, Color color, Position &pos) {
     // 指し手生成アルゴリズムの原理的に、駒打ちの指し手は安全である
+    // よって打ち歩詰めチェックのみ行っている
     if (move.is_drop()) {
         // 打ち歩詰めチェック
         if (move.get_dropped_piece() == PAWN && move.is_check(pos)) {
@@ -399,11 +390,8 @@ bool is_safe_move(Square from, Square to, Color color, Position &pos) {
 }
 
 bool Move::is_check(Position &pos) const {
-    // 指し手を実行
     pos.do_move(*this);
-    // 王手チェック
     bool is_check = pos.is_check(pos.side_to_move);
-    // 指し手を戻す
     pos.undo_move(*this);
     return is_check;
 }
