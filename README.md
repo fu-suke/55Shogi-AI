@@ -2,7 +2,7 @@
 
 ![image](https://github.com/fu-suke/55Shogi-AI/assets/96232134/f42437a2-ccfd-4ef2-a097-744304fbbc6d)
 
-<img src="[***画像のURL***](https://github.com/fu-suke/55Shogi-AI/assets/96232134/f42437a2-ccfd-4ef2-a097-744304fbbc6d)" width="300">
+<img src="https://github.com/fu-suke/55Shogi-AI/assets/96232134/f42437a2-ccfd-4ef2-a097-744304fbbc6d" width="200">
 
 
 ## これは何ですか
