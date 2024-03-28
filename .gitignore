@@ -40,3 +40,6 @@ tempCodeRunnerFile.*
 *.json
 *.txt
 .vscode/*
+
+# python
+__pycache__/
